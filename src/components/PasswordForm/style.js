@@ -41,6 +41,11 @@ export const FormWrapper = styled.div`
       border-radius: 10px;
 
       margin-top: 30px;
+
+      &:disabled {
+        background-color: rgba(238, 30, 117, 0.4);
+        cursor: not-allowed;
+      }
     }
   }
 `

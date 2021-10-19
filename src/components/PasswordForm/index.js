@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { FormWrapper } from './style'
 import { Typography } from '@mui/material'
 import { TextField } from '@mui/material'
@@ -8,11 +8,35 @@ import { AlertBox } from '../AlertBox'
 const PasswordForm = () => {
   const [password, setPassword] = useState('')
   const [passwordConfirmation, setPasswordConfirmation] = useState('')
+  const [confirmationError, setConfirmationError] = useState(false)
+  const [validationError, setValidationError] = useState(false)
+  const validationRegex =
+    /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/
+
+  useEffect(() => {
+    if (password === passwordConfirmation && confirmationError) {
+      setConfirmationError(false)
+    }
+  }, [password, passwordConfirmation, confirmationError])
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
+    confirmationError && setConfirmationError(false)
+    validationError && setValidationError(false)
+
+    if (password !== passwordConfirmation) {
+      setConfirmationError(true)
+      return
+    }
+
+    if (!password.match(validationRegex)) {
+      setValidationError(true)
+      return
+    }
+
     const data = { password, passwordConfirmation }
+
     console.log(data)
 
     resetForm()
@@ -39,6 +63,10 @@ const PasswordForm = () => {
             size="small"
             fullWidth
             label="Придумайте пароль"
+            error={validationError}
+            helperText={
+              validationError && 'Некорректный пароль, придумайте новый'
+            }
             required
             InputProps={{
               style: {
@@ -64,6 +92,8 @@ const PasswordForm = () => {
             size="small"
             fullWidth
             label="Повторите пароль"
+            error={confirmationError}
+            helperText={confirmationError && 'Пароли должны совпадать'}
             required
             InputProps={{
               style: {
@@ -88,7 +118,11 @@ const PasswordForm = () => {
           введенные данные!"
         />
 
-        <button type="submit" className="submit-btn">
+        <button
+          type="submit"
+          className="submit-btn"
+          disabled={confirmationError}
+        >
           Подтвердить
         </button>
       </form>

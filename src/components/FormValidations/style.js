@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const ValidationsWrap = styled.div`
+  width: 100%;
+
   h5 {
     font-size: 14px;
     color: #333;
