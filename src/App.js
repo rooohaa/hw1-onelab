@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Container } from './sc/Container'
+import { PageTitle } from './sc/PageTitle'
+import { MainWrap } from './sc/MainWrap'
+import { PasswordForm } from './components/PasswordForm'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <MainWrap>
+      <Container>
+        <PageTitle>Проверка пароля</PageTitle>
+        <PasswordForm />
+      </Container>
+    </MainWrap>
+  )
 }
 
-export default App;
+export default App
