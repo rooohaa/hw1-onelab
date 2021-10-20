@@ -8,6 +8,10 @@ export const ValidationsWrap = styled.div`
     color: #333;
     line-height: 17px;
     font-weight: normal;
+
+    @media screen and (max-width: 576px) {
+      font-size: 13px;
+    }
   }
 
   ul.validations-list {

@@ -9,6 +9,10 @@ export const ItemWrapper = styled.li`
   color: #8c91b3;
   font-weight: lighter;
 
+  @media screen and (max-width: 576px) {
+    font-size: 12px;
+  }
+
   div.dot {
     width: 5px;
     height: 5px;

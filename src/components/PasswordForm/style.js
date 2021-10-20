@@ -5,8 +5,17 @@ export const FormWrapper = styled.div`
   width: 417px;
   margin: 0 auto;
 
+  @media screen and (max-width: 576px) {
+    width: 90%;
+    padding: 30px 0;
+  }
+
   h4 {
     font-weight: bold;
+
+    @media screen and (max-width: 576px) {
+      font-size: 30px;
+    }
   }
 
   span.form-heading {
@@ -18,6 +27,12 @@ export const FormWrapper = styled.div`
     text-align: center;
 
     margin: 25px 0;
+
+    @media screen and (max-width: 576px) {
+      font-size: 13px;
+
+      margin: 17px 0;
+    }
   }
 
   form {

@@ -73,7 +73,8 @@ const PasswordForm = () => {
             label="Придумайте пароль"
             error={validationError}
             helperText={
-              validationError && 'Некорректный пароль, придумайте новый'
+              validationError &&
+              'Пароль не соответствует требованиям безопасности'
             }
             required
             InputProps={{

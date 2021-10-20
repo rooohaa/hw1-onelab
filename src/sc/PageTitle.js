@@ -7,4 +7,9 @@ export const PageTitle = styled.span`
   text-align: center;
   display: block;
   font-weight: normal;
+
+  @media screen and (max-width: 576px) {
+    font-size: 12px;
+    line-height: 18px;
+  }
 `
