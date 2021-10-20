@@ -35,6 +35,14 @@ const PasswordForm = () => {
       return
     }
 
+    if (
+      password.toLowerCase().indexOf('qwerty') >= 0 ||
+      password.toLowerCase().indexOf('12345') >= 0
+    ) {
+      setValidationError(true)
+      return
+    }
+
     const data = { password, passwordConfirmation }
 
     console.log(data)
