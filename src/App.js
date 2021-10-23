@@ -1,18 +1,8 @@
 import React from 'react'
-import { Container } from './sc/Container'
-import { PageTitle } from './sc/PageTitle'
-import { MainWrap } from './sc/MainWrap'
-import { PasswordForm } from './components/PasswordForm'
+import { MainPage } from './pages/MainPage'
 
 const App = () => {
-  return (
-    <MainWrap>
-      <Container>
-        <PageTitle>Проверка пароля</PageTitle>
-        <PasswordForm />
-      </Container>
-    </MainWrap>
-  )
+  return <MainPage />
 }
 
 export default App
