@@ -34,7 +34,7 @@ export const CardWrapper = styled.div`
   p {
     font-size: 14px;
     font-weight: 400;
-    line-height: 24px;
+    line-height: 19px;
 
     max-width: 70%;
     color: #303030;

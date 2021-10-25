@@ -2,7 +2,8 @@ export const cards = [
   {
     id: 1,
     name: 'Classic',
-    description: 'Снятие до 300 000 ₸ в месяц Казахстана бесплатно',
+    description:
+      'Снятие до 300 000 ₸ в месяц в банкоматах Казахстана бесплатно',
     imgPath: '/images/card1.png',
     cashBack: '15',
   },

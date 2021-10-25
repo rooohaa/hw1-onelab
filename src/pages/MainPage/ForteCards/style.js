@@ -3,6 +3,10 @@ import styled from 'styled-components'
 export const ForteCardsSection = styled.section`
   padding: 64px 0;
 
+  h5 {
+    color: #1e2a41;
+  }
+
   h6 {
     color: #1e2a41;
   }
