@@ -12,6 +12,12 @@ export const HeaderWrapper = styled.header`
     justify-content: space-between;
   }
 
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+  }
+
   .app-logo {
     a {
       display: flex;

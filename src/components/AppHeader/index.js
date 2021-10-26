@@ -2,16 +2,40 @@ import React from 'react'
 import { Container } from '@mui/material'
 import { HeaderWrapper } from './style'
 import { headerLinks } from './mock'
+import { AppSelect } from 'components/AppSelect'
 
 const AppHeader = () => {
   return (
     <HeaderWrapper>
       <Container maxWidth="lg">
         <div className="header-inner">
-          <div className="app-logo">
-            <a href="#">
-              <img src="/icons/logo.svg" alt="App logo" />
-            </a>
+          <div className="logo-wrap">
+            <div className="app-logo">
+              <a href="#">
+                <img src="/icons/logo.svg" alt="App logo" />
+              </a>
+            </div>
+
+            <AppSelect
+              label="Язык"
+              options={[
+                { id: 1, value: 'Рус', meta: 'ru' },
+                { id: 2, value: 'Англ', meta: 'en' },
+                { id: 3, value: 'Каз', meta: 'kz' },
+              ]}
+              onSelect={(value) => console.log('Selected: ', value)}
+            />
+
+            <AppSelect
+              label="Город"
+              iconPath="/icons/location.svg"
+              options={[
+                { id: 1, value: 'Тараз', meta: 'taraz' },
+                { id: 2, value: 'Астана', meta: 'astana' },
+                { id: 3, value: 'Алматы', meta: 'almaty' },
+              ]}
+              onSelect={(value) => console.log('Selected: ', value)}
+            />
           </div>
 
           <nav>
