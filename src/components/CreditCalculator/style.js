@@ -18,9 +18,9 @@ export const CalculatorWrapper = styled.div`
   }
 
   .slider-wrapper {
-    display: flex;
-    align-items: center;
-    column-gap: 16px;
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    column-gap: 20px;
 
     margin-top: 13px;
     margin-bottom: 24px;
