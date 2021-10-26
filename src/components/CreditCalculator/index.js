@@ -14,19 +14,14 @@ const CreditCalculator = () => {
   const rate = discount ? 18.99 : 20.99
 
   const calculateAnnuityPayment = () => {
-    const interestRate = rate / (100 * 12)
+    const interestRate = rate / 100 / 12
+    let pow = interestRate + 1
 
-    const factor =
-      (interestRate * (1 + interestRate) ** creditTerm) /
-        (1 + interestRate) ** creditTerm -
-      1
+    pow = Math.pow(pow, -creditTerm)
+    const annuity = (interestRate / (1 - pow)) * creditValue
 
-    return creditValue * factor
+    return Math.round(annuity)
   }
-
-  const res = calculateAnnuityPayment()
-
-  console.log(res)
 
   return (
     <CalculatorWrapper>
