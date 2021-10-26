@@ -23,6 +23,7 @@ const ForteCards = () => {
                 imgPath={imgPath}
                 cashBack={cashBack}
                 isActive={activeCard === name}
+                onCardClick={(value) => setActiveCard(value)}
               />
             </Grid>
           ))}

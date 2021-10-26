@@ -5,7 +5,7 @@ export const CardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  cursor: pointer;
   border-radius: 4px;
   padding: 5px 0;
 

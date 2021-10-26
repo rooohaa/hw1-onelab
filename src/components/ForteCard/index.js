@@ -3,9 +3,19 @@ import { Typography } from '@mui/material'
 import { AppButton } from 'sc/AppButton'
 import { CardWrapper } from './style'
 
-const ForteCard = ({ imgPath, name, description, cashBack, isActive }) => {
+const ForteCard = ({
+  imgPath,
+  name,
+  description,
+  cashBack,
+  isActive,
+  onCardClick,
+}) => {
   return (
-    <CardWrapper className={isActive ? 'active' : ''}>
+    <CardWrapper
+      className={isActive ? 'active' : ''}
+      onClick={() => onCardClick(name)}
+    >
       <img src={imgPath} alt={name} />
       <span className="card-name">{name}</span>
       <Typography paragraph align="center" gutterBottom>
