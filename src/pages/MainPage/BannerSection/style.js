@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
-export const ArrowButton = styled.div`
+export const ArrowButton = styled.button`
   width: 36px;
   height: 36px;
 
+  border: none;
   background-color: #fff;
 
   display: flex;
@@ -16,6 +17,23 @@ export const ArrowButton = styled.div`
 
   border-radius: 50%;
   cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+`
+
+export const BulletButton = styled.div`
+  background: #ffffff;
+  border-radius: 4px;
+  width: 44px;
+  height: 3px;
+  cursor: pointer;
+
+  &.active {
+    background-color: #1e2a41;
+  }
 `
 
 export const BannerWrap = styled.section`
@@ -54,41 +72,10 @@ export const BannerWrap = styled.section`
     }
   }
 
-  .banner-content {
-    h4 {
-      font-size: 48px;
-      line-height: 57px;
-      color: #fff;
-
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 15px;
-      line-height: 21px;
-      color: #fff;
-      font-weight: 300;
-
-      margin-bottom: 50px;
-    }
-  }
-
   .bullets {
     display: flex;
     align-items: center;
     column-gap: 11px;
-
-    .bullet {
-      background: #ffffff;
-      border-radius: 4px;
-      width: 44px;
-      height: 3px;
-      cursor: pointer;
-
-      &.active {
-        background-color: #1e2a41;
-      }
-    }
   }
 
   ${ArrowButton} {
