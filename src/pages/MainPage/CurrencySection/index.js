@@ -2,6 +2,7 @@ import React from 'react'
 import { CurrencyTable } from 'components/CurrencyTable'
 import { Container, Typography } from '@mui/material'
 import { CurrencySectionWrap } from './style'
+import { CurrencyConverter } from 'components/CurrencyConverter'
 
 const CurrencySection = () => {
   return (
@@ -17,6 +18,7 @@ const CurrencySection = () => {
 
         <div className="wrap">
           <CurrencyTable />
+          <CurrencyConverter />
         </div>
       </Container>
     </CurrencySectionWrap>

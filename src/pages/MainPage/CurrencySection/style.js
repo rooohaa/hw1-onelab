@@ -17,6 +17,7 @@ export const CurrencySectionWrap = styled.section`
   .wrap {
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
     column-gap: 45px;
   }
 `
