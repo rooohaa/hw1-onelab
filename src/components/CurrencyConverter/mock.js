@@ -16,7 +16,7 @@ export const currencies = [
   },
   {
     id: 4,
-    name: 'GDP',
+    name: 'GBP',
     iconPath: '/icons/currencies/pound.svg',
   },
   {

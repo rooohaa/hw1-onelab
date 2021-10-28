@@ -6,7 +6,7 @@ const currenciesIconsMap = {
   EUR: '/icons/currencies/euro.svg',
   RUB: '/icons/currencies/ruble.svg',
   KZT: '/icons/currencies/tenge.svg',
-  GDP: '/icons/currencies/pound.svg',
+  GBP: '/icons/currencies/pound.svg',
 }
 
 const CurrencyTableRow = ({
