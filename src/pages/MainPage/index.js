@@ -6,6 +6,7 @@ import { BannerSection } from './BannerSection'
 import { CreditSection } from './CreditSection'
 import { ForteCards } from './ForteCards'
 import { CurrencySection } from './CurrencySection'
+import { QuestionsSection } from './QuestionsSection'
 
 const MainPage = () => {
   return (
@@ -15,6 +16,7 @@ const MainPage = () => {
       <BannerSection />
       <ForteCards />
       <CreditSection />
+      <QuestionsSection />
       <CurrencySection />
       <AppFooter />
     </>
