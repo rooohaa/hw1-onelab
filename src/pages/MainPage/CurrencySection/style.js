@@ -15,6 +15,8 @@ export const CurrencySectionWrap = styled.section`
   }
 
   .wrap {
+    margin-top: 30px;
+
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
